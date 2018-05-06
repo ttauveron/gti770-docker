@@ -11,6 +11,12 @@ RUN chmod +x Anaconda3-5.1.0-Linux-x86_64.sh && \
 
 ENV PATH="/opt/Anaconda3/bin:${PATH}"
 
-RUN conda install --yes -c conda-forge opencv matplotlib
+RUN conda update -n base conda && \
+conda install --yes -c conda-forge opencv matplotlib jupyter
+
+EXPOSE 8888
+
+CMD jupyter notebook --allow-root --port 8888 --no-browser --ip 0.0.0.0 --NotebookApp.token=''
+# RUN conda install --yes -c conda-forge opencv matplotlib
 
 
