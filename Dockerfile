@@ -16,7 +16,7 @@ conda install --yes -c conda-forge opencv matplotlib jupyter
 
 EXPOSE 8888
 
-CMD jupyter notebook --allow-root --port 8888 --no-browser --ip 0.0.0.0 --NotebookApp.token=''
+CMD jupyter notebook --allow-root --port 8888 --no-browser --ip 0.0.0.0 --NotebookApp.token='' --notebook-dir='/data'
 # RUN conda install --yes -c conda-forge opencv matplotlib
 
 
