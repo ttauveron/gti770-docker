@@ -1,7 +1,7 @@
 FROM ubuntu:18.04
 
 RUN apt-get update && \
-apt-get install -y wget libgl1-mesa-glx
+apt-get install -y wget libgl1-mesa-glx xdg-utils graphviz
 
 RUN wget https://repo.anaconda.com/archive/Anaconda3-5.1.0-Linux-x86_64.sh
 
